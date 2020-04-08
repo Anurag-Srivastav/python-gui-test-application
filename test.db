@@ -1,0 +1,9 @@
+import sqlite3
+conn=sqlite3.connect('db/test.db')
+cursor=conn.cursor()
+cursor.execute("create table t1(ID int(10),NAME varchar(20)")
+cursor.execute("insert into t1 values(12,'anurag')")
+cursor.execute("select * from t1")
+a=cursor.fetchall()
+for x in a:
+    print(x)
